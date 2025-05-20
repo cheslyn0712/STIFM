@@ -2,19 +2,21 @@
 #基本结构如下
 import os
 import numpy as np
+from pathlib import Path
+
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 params = {
     'center_lat': 10,  
     'center_lon':115, 
-    'sampling_window':0.5,
+    'sampling_window':0,
     't_span': 50,
     'test_span':10, 
     't_train': 20131001,  
     'L': 15,  
     'M': 30,  
     't_gap':5,
-    'data_directory': "E:\AAA SST data\SST\SST",
+    'data_directory': str(Path(__file__).parent.parent / "SST Data" / "SST"),
     'window_size': 30,
     'hidden_layers': 128,
     'epochs': 500,  

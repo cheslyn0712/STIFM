@@ -4,7 +4,6 @@ import json
 import numpy as np
 import csv
 import xgboost as xgb
-
 def compute_rmse(outputs, targets):
 
     outputs = torch.tensor(outputs, dtype=torch.float32) if not isinstance(outputs, torch.Tensor) else outputs
